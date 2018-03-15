@@ -26,7 +26,9 @@
 		<div id="menu-wrap" class="menu-back cbp-af-header">
 			<div class="container">
 				<div class="sixteen columns">
-					<div class="logo"></div>
+					<a href="<?php echo home_url( '/' ); ?>">
+						<div class="logo" style="<?php echo 'background: url(' . pallas_get_logo_url() . ') no-repeat center center; background-size: cover;'; ?>"></div>
+					</a>
 					<ul class="slimmenu">
 						<li>
 							<a class="active-menu" href="#">homepages</a>
