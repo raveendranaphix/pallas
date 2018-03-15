@@ -11,3 +11,6 @@ function pallas_get_logo_url() {
 }
 
 // Check home
+function pallas_is_homepage() {
+	return ( is_home() || is_front_page() );
+}
