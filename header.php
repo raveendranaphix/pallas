@@ -29,71 +29,18 @@
 					<a href="<?php echo home_url( '/' ); ?>">
 						<div class="logo" style="<?php echo 'background: url(' . pallas_get_logo_url() . ') no-repeat center center; background-size: cover;'; ?>"></div>
 					</a>
-					<ul class="slimmenu">
-						<li>
-							<a class="active-menu" href="#">homepages</a>
-							<ul class="submenu-back">
-								<li> 
-									<a class="active-menu animsition-link" href="index.html">background image</a>
-								</li>
-								<li>
-									<a href="index2.html" class="animsition-link">background slider</a>
-								</li>
-								<li>
-									<a href="index3.html" class="animsition-link">text slider</a>
-								</li>
-								<li>
-									<a href="index4.html" class="animsition-link">html5 video</a>
-								</li>
-								<li>
-									<a href="index5.html" class="animsition-link">youtube video</a>
-								</li>
-								<li>
-									<a href="index6.html" class="animsition-link">moving image</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="about.html" class="animsition-link">about</a>
-						</li>
-						<li>
-							<a href="#">portfolio</a>
-							<ul class="submenu-back">
-								<li> 
-									<a href="work.html" class="animsition-link">Featured fourths</a>
-								</li>
-								<li>
-									<a href="work1.html" class="animsition-link">No Spaced fourths</a>
-								</li>
-								<li>
-									<a href="work2.html" class="animsition-link">Classic Grid</a>
-								</li>
-								<li>
-									<a href="work3.html" class="animsition-link">Two Halfs</a>
-								</li>
-								<li>
-									<a href="work4.html" class="animsition-link">Lightbox Gallery</a>
-								</li>
-							</ul>
-						</li>
-						<li> 
-							<a href="blog.html" class="animsition-link">jurnal</a>
-						</li>
-						<li>
-							<a href="#">hello</a>
-							<ul class="submenu-back">
-								<li> 
-									<a href="contact.html" class="animsition-link">default</a>
-								</li>
-								<li>
-									<a href="contact1.html" class="animsition-link">minimal</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="shortcodes.html" class="animsition-link">shortcodes</a>
-						</li>
-					</ul>
+						<?php
+							wp_nav_menu( array(
+   								'theme_location'  => 'menu-1',
+   								'depth'			  => 3, 
+								'container'		  => '',
+								'container_class' => '',
+								'container_id'	  => '',
+								'menu_class'	  => 'slimmenu slimmenu-2',
+    							'walker'		  => new Pallas_Nav_Walker(),
+    							'items_wrap'	  => '<ul class="%2$s">%3$s</ul>'
+							) );
+						?>					
 				</div>
 			</div>
 		</div>

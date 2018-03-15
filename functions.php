@@ -167,6 +167,11 @@ add_action( 'wp_enqueue_scripts', 'pallas_scripts' );
 require get_template_directory() . '/inc/extras.php';
 
 /**
+ * Nav walker.
+ */
+require get_template_directory() . '/inc/class.nav_walker.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
