@@ -74,8 +74,8 @@ if ( ! function_exists( 'pallas_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 60,
+			'width'       => 305,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -186,4 +186,14 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+// 
+function pallas_get_logo_url() {
+
+	// Get the image ID
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+
+	$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+	return ( isset( $logo[0] ) ? $logo[0] : '' );
 }
