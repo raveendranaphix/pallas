@@ -1,6 +1,6 @@
 <?php
 
-// Logo URL 
+// Logo URL
 function pallas_get_logo_url() {
 
 	// Get the image ID
@@ -9,3 +9,5 @@ function pallas_get_logo_url() {
 	$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 	return ( isset( $logo[0] ) ? $logo[0] : '' );
 }
+
+// Check home
