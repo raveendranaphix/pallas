@@ -162,6 +162,11 @@ function pallas_scripts() {
 add_action( 'wp_enqueue_scripts', 'pallas_scripts' );
 
 /**
+ * General theme functions.
+ */
+require get_template_directory() . '/inc/extras.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -186,14 +191,4 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
-}
-
-// 
-function pallas_get_logo_url() {
-
-	// Get the image ID
-	$custom_logo_id = get_theme_mod( 'custom_logo' );
-
-	$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-	return ( isset( $logo[0] ) ? $logo[0] : '' );
 }
