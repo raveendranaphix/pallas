@@ -21,38 +21,77 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pallas' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$pallas_description = get_bloginfo( 'description', 'display' );
-			if ( $pallas_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $pallas_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pallas' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+	<div class="animsition">
+	
+		<div id="menu-wrap" class="menu-back cbp-af-header">
+			<div class="container">
+				<div class="sixteen columns">
+					<div class="logo"></div>
+					<ul class="slimmenu">
+						<li>
+							<a class="active-menu" href="#">homepages</a>
+							<ul class="submenu-back">
+								<li> 
+									<a class="active-menu animsition-link" href="index.html">background image</a>
+								</li>
+								<li>
+									<a href="index2.html" class="animsition-link">background slider</a>
+								</li>
+								<li>
+									<a href="index3.html" class="animsition-link">text slider</a>
+								</li>
+								<li>
+									<a href="index4.html" class="animsition-link">html5 video</a>
+								</li>
+								<li>
+									<a href="index5.html" class="animsition-link">youtube video</a>
+								</li>
+								<li>
+									<a href="index6.html" class="animsition-link">moving image</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="about.html" class="animsition-link">about</a>
+						</li>
+						<li>
+							<a href="#">portfolio</a>
+							<ul class="submenu-back">
+								<li> 
+									<a href="work.html" class="animsition-link">Featured fourths</a>
+								</li>
+								<li>
+									<a href="work1.html" class="animsition-link">No Spaced fourths</a>
+								</li>
+								<li>
+									<a href="work2.html" class="animsition-link">Classic Grid</a>
+								</li>
+								<li>
+									<a href="work3.html" class="animsition-link">Two Halfs</a>
+								</li>
+								<li>
+									<a href="work4.html" class="animsition-link">Lightbox Gallery</a>
+								</li>
+							</ul>
+						</li>
+						<li> 
+							<a href="blog.html" class="animsition-link">jurnal</a>
+						</li>
+						<li>
+							<a href="#">hello</a>
+							<ul class="submenu-back">
+								<li> 
+									<a href="contact.html" class="animsition-link">default</a>
+								</li>
+								<li>
+									<a href="contact1.html" class="animsition-link">minimal</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="shortcodes.html" class="animsition-link">shortcodes</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
