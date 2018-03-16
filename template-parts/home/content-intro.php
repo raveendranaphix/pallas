@@ -1,6 +1,6 @@
 <?php
 
-// 
+//
 $image = get_field( 'intro_image', get_the_ID(), true );
 $text_1 = get_field( 'intro_text_1', get_the_ID(), true );
 $text_2 = get_field( 'intro_text_2', get_the_ID(), true );
@@ -17,23 +17,23 @@ $text_2 = get_field( 'intro_text_2', get_the_ID(), true );
 
             <?php if ( ! empty( $text_2 ) ) : ?>
                 <div class="small-text">
-                   <?php echo sprintf( '<h3>%s</h3>', $text_2 ); ?>
+                   <?php echo $text_2; ?>
                 </div>
             <?php endif; ?>
+
             <div class="social-top">
                 <ul class="list-social">
-                    <li class="icon-soc tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
-                        <a href="#">&#xf099;</a>
-                    </li>
-                    <li class="icon-soc tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
-                        <a href="#">&#xf09a;</a>
-                    </li>
-                    <li class="icon-soc tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
-                        <a href="#">&#xf09b;</a>
-                    </li>
-                    <li class="icon-soc tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
-                        <a href="#">&#xf0d5;</a>
-                    </li>
+                    <?php foreach ( pallas_social_links() as $sl ) :
+
+                        // URL
+                        $link = get_theme_mod( 'pallas_social_link_setting_' . $sl['name'] );
+
+                        if ( ! empty( $link ) ) :
+                    ?>
+                        <li class="icon-soc tipped" data-title="<?php echo esc_attr( $sl['title'] ); ?>" data-tipper-options='{"direction":"top","follow":"true"}'>
+                            <a target="_blank" href="<?php echo esc_url( $link ); ?>"><?php echo esc_attr( $sl['icon_hex'] ); ?></a>
+                        </li>
+                    <?php endif; endforeach; ?>
                 </ul>
             </div>
             <a href="#scroll-link" class="scroll scroll-down"></a>
