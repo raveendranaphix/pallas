@@ -1,13 +1,26 @@
+<?php
+
+    // Get the page
+    $section_1_page = get_field( 'homepage_section_1', get_the_ID(), true );
+
+    if ( ! empty( $section_1_page ) ) :
+
+        // Image
+        $image_url = get_the_post_thumbnail_url( $section_1_page->ID, 'full'  );
+?>
 <section class="cd-section" id="scroll-link">
     <div class="cd-block">
-        <div class="cd-half-block"></div>
+        <div class="cd-half-block" style="background-image: url(<?php echo $image_url; ?>);"></div>
         <div class="cd-half-block">
             <div class="block-text">
-                <h2>About Us<span>.</span></h2>
-                <p>We believe in coming up with original ideas and turning them into digital work that is both innovative and measurable. Taking on thought-provoking projects that challenge us creatively and make us go the extra mile is what we consider a way of life.</p>
-                <a href="about.html" class="btn animsition-link">find out more</a>
+                <h2><?php echo get_the_title( $section_1_page->ID ); ?><span>.</span></h2>
+                <p><?php echo get_the_excerpt( $section_1_page->ID ); ?></p>
+                <a href="<?php echo get_the_permalink( $section_1_page->ID ); ?>" class="btn animsition-link">
+                    <?php _e( 'Find out more', 'pallas' ); ?>
+                </a>
             </div>
         </div>
     </div>
 </section>
 <!-- .cd-section -->
+<?php endif;
