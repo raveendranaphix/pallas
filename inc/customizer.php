@@ -20,10 +20,45 @@ function pallas_customize_register( $wp_customize ) {
 			'selector'        => '.site-title a',
 			'render_callback' => 'pallas_customize_partial_blogname',
 		) );
+
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 			'selector'        => '.site-description',
 			'render_callback' => 'pallas_customize_partial_blogdescription',
 		) );
+
+
+		// Social links
+		$wp_customize->add_section( 'pallas_social_links_section', array(
+			'title'        => __( 'Social links', 'pallas' ),
+			'deiscription' => '',
+		) );
+
+
+		// Add setting
+		foreach ( pallas_social_links() as $social_link ) {
+			$wp_customize->add_setting( 'pallas_social_link_setting_' . $social_link['name'],
+				array(
+					'default'    => '',
+					'type'       => 'theme_mod',
+					'capability' => 'edit_theme_options',
+					'transport'  => 'postMessage',
+				)
+			);
+
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					$social_link['name'],
+					array(
+						'label'       => $social_link['label'],
+						'description' => __( 'Place the social media URL here.', 'pallas' ),
+						'section'     => 'pallas_social_links_section',
+						'settings'    => 'pallas_social_link_setting_' . $social_link['name'],
+						'type'        => 'text',
+					)
+				)
+			);
+		}
 	}
 }
 add_action( 'customize_register', 'pallas_customize_register' );
