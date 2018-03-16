@@ -1,3 +1,13 @@
+<?php
+
+    // Get the page
+    $section_2_page = get_field( 'homepage_section_2', get_the_ID(), true );
+
+    if ( ! empty( $section_2_page ) ) :
+
+        // Image
+        $image_url = get_the_post_thumbnail_url( $section_2_page->ID, 'full'  );
+?>
 <section class="cd-section">
     <div class="cd-block">
         <div class="cd-half-block"></div>
