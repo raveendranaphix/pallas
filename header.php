@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 	<div class="animsition">
-	
+
 		<div id="menu-wrap" class="menu-back cbp-af-header">
 			<div class="container">
 				<div class="sixteen columns">
@@ -32,7 +32,7 @@
 						<?php
 							wp_nav_menu( array(
    								'theme_location'  => 'menu-1',
-   								'depth'			  => 3, 
+   								'depth'			  => 3,
 								'container'		  => '',
 								'container_class' => '',
 								'container_id'	  => '',
@@ -40,7 +40,7 @@
     							'walker'		  => new Pallas_Nav_Walker(),
     							'items_wrap'	  => '<ul class="%2$s">%3$s</ul>'
 							) );
-						?>					
+						?>
 				</div>
 			</div>
 		</div>
