@@ -14,3 +14,45 @@ function pallas_get_logo_url() {
 function pallas_is_homepage() {
 	return ( is_home() || is_front_page() );
 }
+
+// Social links
+function pallas_social_links() {
+	return  array(
+		array(
+			'name' => 'facebook',
+			'label' => __( 'Facebook', 'pallas' ),
+			'title' => 'facebook',
+			'icon_hex' => '&#xf09a;'
+		),
+		array(
+			'name' => 'twitter',
+			'label' => __( 'Twitter', 'pallas' ),
+			'title' => 'twitter',
+			'icon_hex' => '&#xf099;'
+		),
+		array(
+			'name' => 'github',
+			'label' => __( 'GitHub', 'pallas' ),
+			'title' => 'github',
+			'icon_hex' => '&#xf09b;'
+		),
+		array(
+			'name' => 'google_plus',
+			'label' => __( 'Google +', 'pallas' ),
+			'title' => 'google +',
+			'icon_hex' => '&#xf0d5;'
+		),
+		array(
+			'name' => 'youtube',
+			'label' => __( 'YouTube', 'pallas' ),
+			'title' => 'youtube',
+			'icon_hex' => '&#xf0d5;'
+		),
+		array(
+			'name' => 'linkedin',
+			'label' => __( 'LinkedIn', 'pallas' ),
+			'title' => 'linkedin',
+			'icon_hex' => '&#xf0d5;'
+		),
+	);
+}
