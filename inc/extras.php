@@ -24,6 +24,7 @@ function pallas_social_links() {
 			'title' => 'facebook',
 			'icon_hex' => '&#xf09a;'
 		),
+
 		array(
 			'name' => 'twitter',
 			'label' => __( 'Twitter', 'pallas' ),
@@ -56,3 +57,6 @@ function pallas_social_links() {
 		),
 	);
 }
+
+// Enable excerpt for pages
+add_post_type_support( 'page', 'excerpt' );
