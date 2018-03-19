@@ -10,14 +10,16 @@
 ?>
 <section class="cd-section">
     <div class="cd-block">
-        <div class="cd-half-block"></div>
+        <div class="cd-half-block" style ="background-image: url( <?php echo $image_url ?>);"></div>
         <div class="cd-half-block">
             <div class="block-text">
-                <h2>Portfolio<span>.</span></h2>
-                <p>We are relentless in moving boundaries and carry out this spirited attitude into digital solutions. Digital solutions that engage, inspire and make you think. Make you curious.</p>
-                <a href="work.html" class="btn animsition-link">discover</a>
+                <h2><?php echo get_the_title( $section_2_page->ID ); ?><span>.</span></h2>
+                <p><?php echo get_the_excerpt( $section_2_page->ID ); ?></p>
+                <a href="<?php echo get_the_permalink( $section_2_page->ID ); ?>" class="btn animsition-link">
+                    <?php _e( 'discover', 'pallas'); ?>
+                </a>
             </div>
         </div>
     </div>
 </section>
-<!-- .cd-section -->
+<?php endif;
