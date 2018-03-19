@@ -44,12 +44,6 @@ function pallas_social_links() {
 			'icon_hex' => '&#xf0d5;'
 		),
 		array(
-			'name' => 'youtube',
-			'label' => __( 'YouTube', 'pallas' ),
-			'title' => 'youtube',
-			'icon_hex' => '&#xf0d5;'
-		),
-		array(
 			'name' => 'linkedin',
 			'label' => __( 'LinkedIn', 'pallas' ),
 			'title' => 'linkedin',
