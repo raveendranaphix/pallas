@@ -5,6 +5,7 @@ $image = get_field( 'intro_image', get_the_ID(), true );
 $text_1 = get_field( 'intro_text_1', get_the_ID(), true );
 $text_2 = get_field( 'intro_text_2', get_the_ID(), true );
 ?>
+
 <section class="cd-section">
     <div class="cd-block">
         <div class="home-top" style="<?php echo isset( $image['url'] ) ? 'background-image: url(' . esc_url( $image['url'] ) . ');' : ''; ?>">
