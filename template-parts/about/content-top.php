@@ -1,6 +1,6 @@
 <?php
-	$section_page = get_field( $homepage_section_1, get_the_ID(), true );
-	$image  = get_the_post_thumbnail_url( $section_page->ID, 'full');
+	$section_page = get_field( 'homepage_section_1', get_the_ID(), true );
+	$image  = get_the_post_thumbnail_url( $section_page->ID );
 	$text_1 = get_field( 'intro_text_1', get_the_ID(), true );
 	$text_2 = get_field( 'intro_text_2', get_the_ID(), true );
 ?>
