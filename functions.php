@@ -7,6 +7,9 @@
  * @package Pallas
  */
 
+// Image resizer
+require __DIR__ . '/inc/lib/aq_resizer.php';
+
 if ( ! function_exists( 'pallas_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -170,6 +173,14 @@ function pallas_scripts() {
 add_action( 'wp_enqueue_scripts', 'pallas_scripts' );
 
 /**
+ * Registers an editor stylesheet for the theme.
+ */
+function pallas_theme_add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
+}
+add_action( 'admin_init', 'pallas_theme_add_editor_styles' );
+
+/**
  * General theme functions.
  */
 require get_template_directory() . '/inc/extras.php';
@@ -178,6 +189,11 @@ require get_template_directory() . '/inc/extras.php';
  * Nav walker.
  */
 require get_template_directory() . '/inc/class.nav_walker.php';
+
+/**
+ * Custom post types.
+ */
+require get_template_directory() . '/inc/post-types/member_type.php';
 
 /**
  * Implement the Custom Header feature.
