@@ -159,6 +159,10 @@ function pallas_scripts() {
 		wp_enqueue_script( 'pallas-about', get_template_directory_uri() . '/assets/js/custom-blog.js', array(), null, true );
 	}
 
+	if ( is_page_template( 'templates/template-hello-minimal.php' ) ) {
+		wp_enqueue_script( 'pallas-about', get_template_directory_uri() . '/assets/js/custom-contact2.js', array(), null, true );
+	}
+
 	/*
 	wp_enqueue_script( 'pallas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
