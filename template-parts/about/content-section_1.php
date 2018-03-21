@@ -15,7 +15,9 @@
             </div>
         </div>
         <div class="eight columns">
-            <?php echo wpautop( $section_1_post->post_content ); ?>
+            <div class="article-content">
+                <?php echo wpautop( $section_1_post->post_content ); ?>
+            </div>
         </div>
     </div>
 </section>
