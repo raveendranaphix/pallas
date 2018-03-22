@@ -18,4 +18,4 @@
 			</div>
 		</div>
 	</div>
-</section> <!-- .cd-section -->
+</section>

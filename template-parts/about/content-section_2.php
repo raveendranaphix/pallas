@@ -44,22 +44,23 @@ if ( $member_query->have_posts() ) :
                             <ul class="list-social-team">
 
                                 <?php if ( ! empty( $twitter_url ) ) : ?>
-                                <li class="icon-soc-team">
-                                    <a target="_blank" href="<?php echo esc_url( $twitter_url ); ?>">&#xf099;</a>
-                                </li>
+                                    <li class="icon-soc-team">
+                                        <a target="_blank" href="<?php echo esc_url( $twitter_url ); ?>">&#xf099;</a>
+                                    </li>
                                 <?php endif; ?>
 
                                 <?php if ( ! empty( $github_url ) ) : ?>
-                                <li class="icon-soc-team">
-                                    <a target="_blank" href="<?php esc_url( $github_url ); ?>">&#xf09b;</a>
-                                </li>
+                                    <li class="icon-soc-team">
+                                        <a target="_blank" href="<?php esc_url( $github_url ); ?>">&#xf09b;</a>
+                                    </li>
                                 <?php endif; ?>
 
                                 <?php if ( ! empty( $google_url ) ) : ?>
-                                <li class="icon-soc-team">
-                                    <a  target="_blank" href="<?php echo esc_url( $google_url ); ?>">&#xf0d5;</a>
-                                </li>
+                                    <li class="icon-soc-team">
+                                        <a target="_blank" href="<?php echo esc_url( $google_url ); ?>">&#xf0d5;</a>
+                                    </li>
                                 <?php endif; ?>
+
                             </ul>
                         </div>
                     </div>

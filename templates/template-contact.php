@@ -6,5 +6,6 @@
 */
 get_header();
 
+	// Your code goes here
 
 get_footer();

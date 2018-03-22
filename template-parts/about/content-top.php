@@ -1,4 +1,6 @@
 <?php
+
+	// Page data
 	$section_page = get_field( 'homepage_section_1', get_the_ID(), true );
 	$image  = get_the_post_thumbnail_url( $section_page->ID );
 	$text_1 = get_field( 'intro_text_1', get_the_ID(), true );
@@ -6,9 +8,9 @@
 ?>
 <section class="cd-section">
 	<div class="cd-block">
-		<div class="about-top" style ="background-image: url( <?php echo $image; ?> );">
+		<div class="about-top" style ="background-image: url(<?php echo $image; ?>);">
 
-			<?php if( ! empty( $text_1 ) ): ?>
+			<?php if ( ! empty( $text_1 ) ): ?>
 				<div class="big-text-pages-top">
 					<?php echo sprintf( '<h1>%s<span>.</span></h1>', $text_1 ); ?>
 				</div>

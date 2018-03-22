@@ -1,15 +1,15 @@
 <?php
 
-	//
+	// Page data
 	$section_1_post = get_field( 'jurnal_section_1', get_the_ID(), true );
 
-    if ( ! empty( $section_1_post ) ) :
+	if ( ! empty( $section_1_post ) ) :
 
 		setup_postdata( $GLOBALS['post'] =& $section_1_post );
 		global $post;
 
-    	// Image
-        $image_url = get_the_post_thumbnail_url( $post->ID, 'full'  );
+	    	// Image
+		$image_url = get_the_post_thumbnail_url( $post->ID, 'full'  );
 ?>
 <section class="cd-section-blog" id="scroll-link">
 	<div class="cd-block-blog">
