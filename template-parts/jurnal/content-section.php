@@ -9,7 +9,7 @@
 		global $post;
 
     	// Image
-		$image_url = get_the_post_thumbnail_url( $post->ID, 'full'  );
+		$image_url = get_the_post_thumbnail_url( $post->ID, 'full' );
 ?>
 <section class="cd-section-blog" id="scroll-link">
 	<div class="cd-block-blog">
