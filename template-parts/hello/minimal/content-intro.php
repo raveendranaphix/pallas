@@ -11,7 +11,7 @@
 	<div class="cd-block">
 		<div class="contact-top">
 
-			<div class="contact-top-background" style ="background-image: url( <?php echo $image; ?>)"></div>
+			<div class="contact-top-background" style ="background-image: url( <?php echo $image; ?> )"></div>
 
 			<?php
 			if ( ! empty( $text_1 ) ) :
@@ -22,7 +22,7 @@
 			<?php endif; ?>
 
 			<?php if ( ! empty( $text_2 ) ) : ?>
-			<div class="small-text"><?php echo $text_2?></div>
+			<div class="small-text"><?php echo $text_2; ?></div>
 			<?php endif; ?>
 
 			<a href="#scroll-link" class="scroll scroll-down"></a>

@@ -7,7 +7,7 @@
 ?>
 <section class="cd-section-blog");>
 	<div class="cd-block-blog">
-		<div class="blog-top" style ="background-image: url( <?php echo $image; ?>">
+		<div class="blog-top" style ="background-image: url( <?php echo $image; ?> )">
 
 			<?php if( ! empty( $text_1 ) ): ?>
 				<div class="big-text-pages-top">
