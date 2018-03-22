@@ -5,7 +5,7 @@
 */
 get_header();
 
-	//
+	// Page parts
 	get_template_part( 'template-parts/home/content', 'intro' );
 	get_template_part( 'template-parts/home/content', 'section_1' );
 	get_template_part( 'template-parts/home/content', 'section_2' );
