@@ -1,5 +1,6 @@
 <?php
 
+	// Page data
 	$section_page = get_field( 'homepage_section_3', get_the_ID(), true );
 	$image  = get_the_post_thumbnail_url( $section_page->ID, 'full' );
 	$text_1 = get_field( 'intro_text_1', get_the_ID(), true );

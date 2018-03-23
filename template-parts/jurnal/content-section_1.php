@@ -8,7 +8,7 @@
 		setup_postdata( $GLOBALS['post'] =& $section_1_post );
 		global $post;
 
-	    	// Image
+    	// Image
 		$image_url = get_the_post_thumbnail_url( $post->ID, 'full' );
 ?>
 <section class="cd-section-blog" id="scroll-link">
