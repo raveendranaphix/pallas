@@ -59,6 +59,39 @@ function pallas_customize_register( $wp_customize ) {
 				)
 			);
 		}
+
+		// Cpntact Information
+		$wp_customize->add_section( 'pallas_contact_info_section', array(
+			'title'        => __( 'Contact Info', 'pallas' ),
+			'deiscription' => '',
+		) );
+
+
+		// Add setting
+		foreach ( pallas_contact_info() as $contact_info ) {
+			$wp_customize->add_setting( 'pallas_contact_info_setting_' . $contact_info['name'],
+				array(
+					'default'    => '',
+					'type'       => 'theme_mod',
+					'capability' => 'edit_theme_options',
+					'transport'  => 'postMessage',
+				)
+			);
+
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					$contact_info['name'],
+					array(
+						'label'       => $contact_info['label'],
+						'description' => __( 'Place the contact information here', 'pallas' ),
+						'section'     => 'pallas_contact_info_section',
+						'settings'    => 'pallas_contact_info_setting_' . $contact_info['name'],
+						'type'        => 'text',
+					)
+				)
+			);
+		}
 	}
 }
 add_action( 'customize_register', 'pallas_customize_register' );
