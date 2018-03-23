@@ -9,6 +9,8 @@ get_header();
 	get_template_part( 'template-parts/jurnal/content', 'intro' );
 
 	foreach ( range( 1, 4 ) as $index ) {
+
+		// Will be available globally
 		set_query_var( 'section_index', $index );
 		get_template_part( 'template-parts/jurnal/content', 'section' );
 	}

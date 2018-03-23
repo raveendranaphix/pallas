@@ -1,7 +1,7 @@
 <?php
 
 	// Page data
-	$section_post = get_field( 'jurnal_section_{$section_index}', get_the_ID(), true );
+	$section_post = get_field( "jurnal_section_{$section_index}", get_the_ID(), true );
 
 	if ( ! empty( $section_post ) ) :
 
