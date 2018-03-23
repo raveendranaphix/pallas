@@ -52,6 +52,30 @@ function pallas_social_links() {
 	);
 }
 
+// Social links
+function pallas_contact_info() {
+	return  array(
+		array(
+			'name'     => 'email',
+			'label'    => __( 'Email', 'pallas' ),
+			'title'    => 'Email',
+			'icon_hex' => '&#xf1d8;'
+		),
+		array(
+			'name'     => 'phone',
+			'label'    => __( 'Phone', 'pallas' ),
+			'title'    => 'Phone',
+			'icon_hex' => '&#xf095;'
+		),
+		array(
+			'name'     => 'address',
+			'label'    => __( 'Address', 'pallas' ),
+			'title'    => 'Address',
+			'icon_hex' => '&#xf041;'
+		),
+	);
+}
+
 // Enable excerpt for pages
 add_post_type_support( 'page', 'excerpt' );
 
