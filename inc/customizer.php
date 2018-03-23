@@ -30,7 +30,7 @@ function pallas_customize_register( $wp_customize ) {
 		// Social links
 		$wp_customize->add_section( 'pallas_social_links_section', array(
 			'title'        => __( 'Social links', 'pallas' ),
-			'deiscription' => '',
+			'deiscription' => __( 'Place your social links here.', 'pallas' ),
 		) );
 
 
@@ -62,14 +62,13 @@ function pallas_customize_register( $wp_customize ) {
 
 		// Cpntact Information
 		$wp_customize->add_section( 'pallas_contact_info_section', array(
-			'title'        => __( 'Contact Info', 'pallas' ),
-			'deiscription' => '',
+			'title'        => __( 'Contact', 'pallas' ),
+			'deiscription' => __( 'Place your contact info here.', 'pallas' ),
 		) );
 
-
 		// Add setting
-		foreach ( pallas_contact_info() as $contact_info ) {
-			$wp_customize->add_setting( 'pallas_contact_info_setting_' . $contact_info['name'],
+		foreach ( pallas_contact_info() as $field ) {
+			$wp_customize->add_setting( 'pallas_contact_info_setting_' . $field['name'],
 				array(
 					'default'    => '',
 					'type'       => 'theme_mod',
@@ -81,13 +80,13 @@ function pallas_customize_register( $wp_customize ) {
 			$wp_customize->add_control(
 				new WP_Customize_Control(
 					$wp_customize,
-					$contact_info['name'],
+					$field['name'],
 					array(
-						'label'       => $contact_info['label'],
-						'description' => __( 'Place the contact information here', 'pallas' ),
+						'label'       => $field['label'],
+						'description' => $field['desc'],
 						'section'     => 'pallas_contact_info_section',
-						'settings'    => 'pallas_contact_info_setting_' . $contact_info['name'],
-						'type'        => 'text',
+						'settings'    => 'pallas_contact_info_setting_' . $field['name'],
+						'type'        => $field['type'],
 					)
 				)
 			);

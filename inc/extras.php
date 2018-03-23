@@ -57,21 +57,27 @@ function pallas_contact_info() {
 	return  array(
 		array(
 			'name'     => 'email',
-			'label'    => __( 'Email', 'pallas' ),
+			'label'    => __( 'Email address', 'pallas' ),
 			'title'    => 'Email',
-			'icon_hex' => '&#xf1d8;'
+			'icon_hex' => '&#xf1d8;',
+			'desc' => __( 'Your description goes here.' ),
+			'type' => 'text',
 		),
 		array(
 			'name'     => 'phone',
 			'label'    => __( 'Phone', 'pallas' ),
 			'title'    => 'Phone',
-			'icon_hex' => '&#xf095;'
+			'icon_hex' => '&#xf095;',
+			'desc' => __( 'Your description goes here.' ),
+			'type' => 'text',
 		),
 		array(
 			'name'     => 'address',
-			'label'    => __( 'Address', 'pallas' ),
+			'label'    => __( 'Full address', 'pallas' ),
 			'title'    => 'Address',
-			'icon_hex' => '&#xf041;'
+			'icon_hex' => '&#xf041;',
+			'desc' => __( 'Your address description goes here.' ),
+			'type' => 'textarea',
 		),
 	);
 }
